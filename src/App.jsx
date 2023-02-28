@@ -554,6 +554,25 @@ function App() {
             <p>All rights reserved</p>
             <p>&copy; 2022 Forest Coffee</p>
           </div>
+
+          <div className="footer_details_2">
+            <p>
+              coded by{" "}
+              <a href="https://github.com/felipesoarws" target="_blank">
+                @felipesoarws
+              </a>
+            </p>
+
+            <p>
+              designed by{" "}
+              <a
+                href="https://www.behance.net/gallery/152673617/Landing-page-coffee-in-the-style-of-Neo-brutalism?tracking_source=search_projects%7Cneo+brutalism+website+design"
+                target="_blank"
+              >
+                Larisa Komarova
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </div>
