@@ -33,6 +33,11 @@ import chef from "./assets/chef.png";
 import star_full from "./assets/star_full.png";
 import star_empty from "./assets/star_empty.png";
 
+// footer section
+import facebook_icon from "./assets/facebook_icon.png";
+import apple_icon from "./assets/apple_icon.png";
+import google_icon from "./assets/google_icon.png";
+
 const dishes = [
   {
     name: "Santorini Salad",
@@ -486,8 +491,71 @@ function App() {
               <span>Alice</span>
             </div>
           </div>
+
+          <div className="ratings_cards_card">
+            <div className="ratings_cards_card_first">
+              <p>03/07/2022</p>
+              <div className="stars">
+                <img src={star_full} alt="" />
+                <img src={star_full} alt="" />
+                <img src={star_full} alt="" />
+                <img src={star_full} alt="" />
+                <img src={star_empty} alt="" />
+              </div>
+            </div>
+            <div className="ratings_cards_card_second">
+              <p>
+                Very good service, good menu and not overly extensive. Food was
+                very good quality all around.
+              </p>
+              <span>Jordan</span>
+            </div>
+          </div>
         </div>
       </div>
+      <footer>
+        <div className="footer">
+          <div className="footer_content">
+            <div className="footer_content_title">
+              <h1>
+                Forest <span>Coffee</span>
+              </h1>
+            </div>
+            <p>120 Hudson St, New York, NY 10013,</p>
+            <p>contact@forestcoffee.com</p>
+            <p>
+              <a href="tel: +12122190666">
+                <strong>+1 212-219-0666</strong>
+              </a>
+            </p>
+
+            <div className="footer_content_social_medias">
+              <div className="footer_content_social_medias_icon">
+                <img src={google_icon} alt="" />
+              </div>
+              <div className="footer_content_social_medias_icon">
+                <img src={apple_icon} alt="" />
+              </div>
+              <div className="footer_content_social_medias_icon">
+                <img src={facebook_icon} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="footer_map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2331.757189517023!2d-74.01080253503437!3d40.71988863241129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f568ae3a11%3A0x4de0e0aa48068655!2sBubby&#39;s!5e0!3m2!1spt-BR!2sbr!4v1677602700438!5m2!1spt-BR!2sbr"
+              height="450"
+              style={{ border: "3px solid black" }}
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div className="footer_details">
+            <p>Privacy Policy</p>
+            <p>All rights reserved</p>
+            <p>&copy; 2022 Forest Coffee</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
