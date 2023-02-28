@@ -1,0 +1,1310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #48b8ac;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+img {
+  width: 100%;
+}
+
+body .button button {
+  background-color: #ffd600;
+  color: black;
+  font-weight: bold;
+  border: 3px solid black;
+  box-shadow: -3px 3px 1px 1px black;
+  outline: 0;
+  padding: 0.4rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+body .button button:hover {
+  background-color: #fffaf0;
+}
+body .button button:focus, body .button button:active {
+  box-shadow: 0 0 0 0 black;
+  background-color: #ffd600;
+}
+body .menu_mobile {
+  display: flex;
+  visibility: visible;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  body .menu_mobile {
+    display: none;
+    visibility: hidden;
+  }
+}
+body .menu_desktop {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  body .menu_desktop {
+    display: flex;
+    visibility: visible;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+body header {
+  padding: 1rem 2rem;
+  background-color: #48b8ac;
+}
+body header .menu .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body header .menu_mobile .title h1,
+body header .menu_desktop .title h1 {
+  line-height: 1;
+  font-size: 1.7rem;
+}
+body header .menu_mobile .title h1 span,
+body header .menu_desktop .title h1 span {
+  display: block;
+}
+body header .menu_mobile .icon_menu svg,
+body header .menu_desktop .icon_menu svg {
+  font-size: 2rem;
+}
+body header .menu_mobile nav,
+body header .menu_desktop nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  body header .menu_mobile nav,
+  body header .menu_desktop nav {
+    gap: 5rem;
+  }
+}
+@media (min-width: 1440px) {
+  body header .menu_mobile nav,
+  body header .menu_desktop nav {
+    gap: 7rem;
+  }
+}
+body header .menu_mobile nav li,
+body header .menu_desktop nav li {
+  padding: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+body header .menu_mobile nav li a,
+body header .menu_desktop nav li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+body header .menu_mobile nav li a:hover,
+body header .menu_desktop nav li a:hover {
+  color: white;
+}
+body .discount {
+  background-color: #000000;
+  padding: 1rem;
+  text-align: center;
+}
+body .discount p,
+body .discount span {
+  color: #fffaf0;
+}
+body .discount span {
+  font-weight: bold;
+}
+body .summer_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem 1rem;
+  border-bottom: 3px solid black;
+}
+@media (min-width: 1024px) {
+  body .summer_menu {
+    gap: 8rem;
+    padding: 2.5rem 4rem 4rem 4rem;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) {
+  body .summer_menu {
+    padding: 2.5rem 6rem 6rem 6rem;
+  }
+}
+body .summer_menu .desc_title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 1440px) {
+  body .summer_menu .desc_title {
+    gap: 3rem;
+  }
+}
+body .summer_menu .desc_title h2,
+body .summer_menu .desc_title span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 6vw;
+}
+@media (min-width: 1024px) {
+  body .summer_menu .desc_title h2,
+  body .summer_menu .desc_title span {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  body .summer_menu .desc_title h2,
+  body .summer_menu .desc_title span {
+    font-size: 4.5rem;
+  }
+}
+body .summer_menu .desc_title h2 span {
+  display: block;
+}
+body .summer_menu .desc_title button {
+  font-size: 4vw;
+}
+@media (min-width: 1024px) {
+  body .summer_menu .desc_title button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  body .summer_menu .desc_title button {
+    font-size: 2rem;
+  }
+}
+body .summer_menu .img img {
+  width: 45vw;
+  border: 3px solid black;
+  box-shadow: -6px 6px 1px 2px black;
+  outline: 0;
+}
+@media (min-width: 1024px) {
+  body .summer_menu .img img {
+    width: 30rem;
+    height: 20rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (min-width: 1440px) {
+  body .summer_menu .img img {
+    width: 45rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 27rem;
+  }
+}
+body .chef_signature {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  body .chef_signature {
+    align-items: flex-start;
+    padding: 4rem;
+  }
+}
+body .chef_signature_title {
+  margin: 2rem 0;
+}
+body .chef_signature_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4.5vw;
+  display: block;
+  position: relative;
+}
+@media (min-width: 768px) {
+  body .chef_signature_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .chef_signature_title h1 {
+    font-size: 2rem;
+  }
+}
+body .chef_signature_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 98%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .chef_signature_title span {
+    width: 32rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .chef_signature_title span {
+    width: 40rem;
+  }
+}
+body .chef_dishes {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  body .chef_dishes {
+    gap: 3.5rem;
+  }
+}
+body .chef_dishes .dish {
+  border: 3px solid black;
+  box-shadow: -6px 6px 1px 2px black;
+  outline: 0;
+}
+@media (min-width: 768px) {
+  body .chef_dishes .dish {
+    width: 13rem;
+  }
+}
+@media (min-width: 1440px) {
+  body .chef_dishes .dish {
+    width: 20rem;
+  }
+}
+body .chef_dishes .dish_image {
+  box-shadow: 0 0 1px 1px black;
+  height: 12.5rem;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1440px) {
+  body .chef_dishes .dish_image {
+    height: 20rem;
+  }
+}
+body .chef_dishes .dish_image img {
+  width: 60vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+body .chef_dishes .dish_image img:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 639px) {
+  body .chef_dishes .dish_image img {
+    width: 40vw;
+  }
+}
+@media (min-width: 768px) {
+  body .chef_dishes .dish_image img {
+    width: 100%;
+  }
+}
+body .chef_dishes .dish_image .dish_info_icon,
+body .chef_dishes .dish_image .dish_info_weight {
+  border: 3px solid black;
+  padding: 0.2rem;
+  background-color: #48b8ac;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .chef_dishes .dish_image .dish_info_icon p,
+body .chef_dishes .dish_image .dish_info_weight p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+body .chef_dishes .dish_image .dish_info_icon {
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+body .chef_dishes .dish_image .dish_info_icon p {
+  font-family: "Dela Gothic One", cursive;
+}
+body .chef_dishes .dish_image .dish_info_weight {
+  bottom: 0.2rem;
+  right: 0.2rem;
+}
+body .chef_dishes .dish_title {
+  padding: 1rem;
+}
+body .chef_dishes .dish_title h2 {
+  font-size: 0.9rem;
+}
+@media (min-width: 1440px) {
+  body .chef_dishes .dish_title h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container {
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+body .booking_container .booking {
+  background-color: #48b8ac;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking {
+    align-items: flex-start;
+    border: 3px solid black;
+  }
+}
+@media (min-width: 1440px) {
+  body .booking_container .booking {
+    width: 90vw;
+  }
+}
+body .booking_container .booking_title {
+  z-index: 10;
+}
+body .booking_container .booking_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 6vw;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  body .booking_container .booking_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_title h1 {
+    font-size: 2rem;
+  }
+}
+body .booking_container .booking_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 95%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .booking_container .booking_title span {
+    width: 11rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_title span {
+    width: 15rem;
+  }
+}
+body .booking_container .booking_inputs {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 425px) {
+  body .booking_container .booking_inputs {
+    width: 23rem;
+  }
+}
+@media (min-width: 768px) {
+  body .booking_container .booking_inputs {
+    width: 30rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs {
+    flex-direction: row;
+    width: 100%;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+}
+body .booking_container .booking_inputs_1 {
+  width: 100%;
+}
+body .booking_container .booking_inputs_2 .terms {
+  margin: 1rem 0 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs_2 .terms {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+body .booking_container .booking_inputs_2 .terms p {
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+body .booking_container .booking_inputs_2 .terms .term {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+body .booking_container .booking_inputs_2 .terms .term input {
+  width: 2rem;
+}
+body .booking_container .booking_inputs_2 .terms .term p {
+  font-size: 0.8rem;
+  margin: 0;
+}
+body .booking_container .booking_inputs_2 .terms .term p span {
+  font-weight: bold;
+}
+body .booking_container .booking_inputs_3 {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+@media (min-width: 768px) {
+  body .booking_container .booking_inputs_3 {
+    left: 150px;
+    bottom: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs_3 {
+    left: 2rem;
+    bottom: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+body .booking_container .booking_inputs .line .input {
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+  width: 100%;
+  margin: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs .line .input {
+    width: 20vw;
+  }
+}
+body .booking_container .booking_inputs .line .input .icon {
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  margin: 0 0.4rem;
+}
+body .booking_container .booking_inputs .line .input .icon svg {
+  font-weight: bold;
+  font-size: 1rem;
+}
+body .booking_container .booking_inputs input,
+body .booking_container .booking_inputs textarea {
+  outline: 0;
+  padding: 0.8rem 0.3rem;
+  width: 100%;
+  border: 0;
+  resize: none;
+  font-weight: bold;
+  color: black;
+}
+body .booking_container .booking_inputs input::-moz-placeholder, body .booking_container .booking_inputs textarea::-moz-placeholder {
+  font-weight: bold;
+  color: rgba(68, 68, 68, 0.5);
+}
+body .booking_container .booking_inputs input::placeholder,
+body .booking_container .booking_inputs textarea::placeholder {
+  font-weight: bold;
+  color: rgba(68, 68, 68, 0.5);
+}
+body .booking_container .booking_inputs textarea {
+  padding: 0.8rem;
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+}
+@media (min-width: 1024px) {
+  body .booking_container .booking_inputs textarea {
+    width: 40vw;
+  }
+}
+body .booking_container .booking_inputs input::-webkit-outer-spin-button,
+body .booking_container .booking_inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .booking_container .booking_inputs input[type=number] {
+  -moz-appearance: textfield;
+}
+body .main_menu {
+  padding: 4rem 2rem;
+}
+@media (min-width: 1024px) {
+  body .main_menu {
+    padding: 4rem;
+  }
+}
+body .main_menu_title {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  body .main_menu_title {
+    justify-content: flex-start;
+  }
+}
+body .main_menu_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4.5vw;
+  display: block;
+  position: relative;
+}
+@media (min-width: 768px) {
+  body .main_menu_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .main_menu_title h1 {
+    font-size: 2rem;
+  }
+}
+body .main_menu_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 90%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .main_menu_title span {
+    width: 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .main_menu_title span {
+    width: 10rem;
+  }
+}
+body .main_menu_plates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+body .main_menu_plates .menu_plate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+  padding: 1rem 2rem;
+  width: 21rem;
+  height: 10.5rem;
+}
+@media (min-width: 1024px) {
+  body .main_menu_plates .menu_plate {
+    width: 26rem;
+  }
+}
+body .main_menu_plates .menu_plate img {
+  width: 9rem;
+  transition: all 0.3s ease-in-out;
+}
+body .main_menu_plates .menu_plate img:hover {
+  transform: scale(1.1);
+}
+body .main_menu_plates .menu_plate h1 {
+  font-size: 1.5rem;
+}
+body .our_history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  body .our_history {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 4rem 8rem;
+  }
+}
+body .our_history_video img {
+  width: 100%;
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+  height: 19rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  body .our_history_video img {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .our_history_video img {
+    height: 30rem;
+    width: 40vw;
+  }
+}
+body .our_history_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .our_history_content_title {
+  align-items: center;
+  margin: 1.5rem 0;
+  z-index: 10;
+}
+@media (min-width: 1024px) {
+  body .our_history_content_title {
+    width: 100%;
+  }
+}
+body .our_history_content_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4vw;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  body .our_history_content_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .our_history_content_title h1 {
+    font-size: 1.5rem;
+  }
+}
+body .our_history_content_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 80%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .our_history_content_title span {
+    width: 28rem;
+    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+  }
+}
+@media (min-width: 1024px) {
+  body .our_history_content_title span {
+    width: 24rem;
+  }
+}
+body .our_history_content_desc {
+  margin: 2rem;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  body .our_history_content_desc {
+    text-align: left;
+    margin: 3rem 0;
+  }
+}
+body .our_history_content_desc p {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 1.2rem;
+}
+body .our_history_content_desc .flex {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  body .our_history_content_desc .flex {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  body .our_history_content_desc .flex .f1,
+  body .our_history_content_desc .flex .f2 {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  body .our_history_content_desc .flex {
+    transform: translateY(3rem);
+  }
+}
+body .articles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  body .articles {
+    padding: 4rem 8rem;
+  }
+}
+body .articles_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+  height: 30rem;
+  overflow: hidden;
+}
+@media (min-width: 425px) {
+  body .articles_container {
+    height: 35rem;
+  }
+}
+@media (min-width: 768px) {
+  body .articles_container {
+    height: 30rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .articles_container {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+body .articles_container_promotions, body .articles_container_bonuses {
+  height: 15rem;
+  width: 100%;
+}
+body .articles_container_promotions h1,
+body .articles_container_promotions span, body .articles_container_bonuses h1,
+body .articles_container_bonuses span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body .articles_container_promotions {
+  height: 15rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-bottom: 2px solid black;
+}
+@media (min-width: 425px) {
+  body .articles_container_promotions {
+    height: 17.5rem;
+  }
+}
+@media (min-width: 768px) {
+  body .articles_container_promotions {
+    height: 30rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .articles_container_promotions {
+    height: 30rem;
+    border: 0;
+    border-right: 2px solid black;
+  }
+}
+body .articles_container_promotions span {
+  display: block;
+}
+body .articles_container_promotions h1 {
+  font-size: 4vw;
+}
+@media (min-width: 1024px) {
+  body .articles_container_promotions h1 {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 1440px) {
+  body .articles_container_promotions h1 {
+    font-size: 2vw;
+  }
+}
+body .articles_container_bonuses {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 15rem;
+}
+@media (min-width: 425px) {
+  body .articles_container_bonuses {
+    height: 17.5rem;
+  }
+}
+@media (min-width: 768px) {
+  body .articles_container_bonuses {
+    height: 30rem;
+  }
+}
+body .articles_container_bonuses span {
+  display: block;
+}
+body .articles_container_bonuses_first, body .articles_container_bonuses_second {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .articles_container_bonuses_first h1, body .articles_container_bonuses_second h1 {
+  font-size: 3vw;
+}
+@media (min-width: 768px) {
+  body .articles_container_bonuses_first h1, body .articles_container_bonuses_second h1 {
+    font-size: 2.5vw;
+  }
+}
+@media (min-width: 1024px) {
+  body .articles_container_bonuses_first h1, body .articles_container_bonuses_second h1 {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 1440px) {
+  body .articles_container_bonuses_first h1, body .articles_container_bonuses_second h1 {
+    font-size: 1.5vw;
+  }
+}
+body .articles_container_bonuses_first {
+  grid-column: 1/-1;
+  border-bottom: 2px solid black;
+}
+body .articles_container_bonuses_first h1,
+body .articles_container_bonuses_first span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body .articles_container_bonuses_first .blue {
+  background-color: #58c7da;
+  border-right: 2px solid black;
+}
+body .articles_container_bonuses_first .pink {
+  background-color: #f16393;
+}
+body .articles_container_bonuses_first .blue,
+body .articles_container_bonuses_first .pink {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0.8rem;
+}
+body .articles_container_bonuses_second {
+  background-color: #fdb64e;
+  grid-column: 1/-1;
+  height: 100%;
+}
+body .articles_container_bonuses_second h1,
+body .articles_container_bonuses_second span {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body .our_command {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  body .our_command {
+    padding: 2rem 8rem;
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+body .our_command_cards {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  body .our_command_cards {
+    width: 40vw;
+    height: 38rem;
+  }
+}
+body .our_command_cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: 3px solid black;
+  overflow: hidden;
+  box-shadow: -4px 4px 1px 1px black;
+}
+body .our_command_cards .card .image {
+  width: 100%;
+}
+body .our_command_cards .card .content {
+  padding: 0.8rem;
+  text-align: center;
+}
+body .our_command_cards .card .content h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 5vw;
+}
+@media (min-width: 768px) {
+  body .our_command_cards .card .content h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .our_command_cards .card .content h1 {
+    font-size: 1.5rem;
+  }
+}
+body .our_command_cards .card .content p {
+  font-weight: bold;
+  margin: 0.6rem 0;
+}
+body .our_command_cards_card_2 {
+  background-color: #f16393;
+  height: 27rem;
+  width: 18rem;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+@media (min-width: 1024px) {
+  body .our_command_cards_card_2 {
+    transform: rotate(4deg) translate(8rem, 5rem);
+  }
+}
+body .our_command_cards_card_2 img {
+  height: 20rem;
+  border-bottom: 2px solid black;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .our_command_cards_card_1 {
+  z-index: 1000;
+  background-color: #58c7da;
+  height: 27rem;
+  width: 18rem;
+  transform: rotate(-2deg);
+}
+@media (min-width: 1024px) {
+  body .our_command_cards_card_1 {
+    transform: rotate(-3deg) translate(-5rem, -15rem);
+  }
+}
+body .our_command_cards_card_1 img {
+  height: 20rem;
+  border-bottom: 2px solid black;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .our_command_cards_card_3 {
+  background-color: #fdb64e;
+  height: 27rem;
+  width: 18rem;
+  transform: rotate(2deg) translateY(10rem);
+  z-index: -1000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+body .our_command_cards_card_3 img {
+  height: 20rem;
+  border-bottom: 2px solid black;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .our_command_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.8rem 0;
+}
+@media (min-width: 1024px) {
+  body .our_command_content {
+    width: 30vw;
+  }
+}
+@media (min-width: 1224px) {
+  body .our_command_content {
+    width: 50vw;
+  }
+}
+@media (min-width: 1440px) {
+  body .our_command_content {
+    width: 70vw;
+  }
+}
+body .our_command_content_title {
+  align-items: center;
+  margin: 1.5rem 0;
+  z-index: 10;
+}
+@media (min-width: 1024px) {
+  body .our_command_content_title {
+    width: 100%;
+  }
+}
+body .our_command_content_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4vw;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  body .our_command_content_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .our_command_content_title h1 {
+    font-size: 1.5rem;
+  }
+}
+body .our_command_content_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 90%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .our_command_content_title span {
+    width: 15rem;
+    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+  }
+}
+@media (min-width: 1024px) {
+  body .our_command_content_title span {
+    width: 15rem;
+  }
+}
+body .our_command_content_desc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+body .our_command_content_desc p,
+body .our_command_content_desc span {
+  font-size: 1.2rem;
+}
+body .ratings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  body .ratings {
+    padding: 4rem;
+    gap: 1rem;
+  }
+}
+body .ratings_title {
+  align-items: center;
+  margin: 1.5rem 0;
+  z-index: 10;
+}
+@media (min-width: 1024px) {
+  body .ratings_title {
+    width: 100%;
+  }
+}
+body .ratings_title h1 {
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 4vw;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  body .ratings_title h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .ratings_title h1 {
+    font-size: 1.5rem;
+  }
+}
+body .ratings_title span {
+  display: block;
+  background-color: #ffd600;
+  width: 90%;
+  height: 0.5rem;
+  position: absolute;
+  transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  body .ratings_title span {
+    width: 30rem;
+    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+  }
+}
+@media (min-width: 1024px) {
+  body .ratings_title span {
+    width: 31rem;
+  }
+}
+@media (min-width: 1440px) {
+  body .ratings_title span {
+    width: 25rem;
+  }
+}
+body .ratings_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+body .ratings_cards_card {
+  border: 3px solid black;
+  box-shadow: -4px 4px 1px 1px black;
+  padding: 1.3rem;
+  border-radius: 0.8rem;
+  height: 12.5rem;
+  width: 19.5rem;
+}
+body .ratings_cards_card_first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+body .ratings_cards_card_first .stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+body .ratings_cards_card_first .stars img {
+  width: 1.72rem;
+}
+body .ratings_cards_card_second {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 8rem;
+}
+body .ratings_cards_card span {
+  display: block;
+  font-weight: bold;
+}
+body .ratings_cards_card p {
+  margin: 0.7rem 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=index.css.map */

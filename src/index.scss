@@ -1,0 +1,1348 @@
+// font-family: 'Dela Gothic One', cursive;
+$blue: #48b8ac;
+$light_blue: #58c7da;
+$pink: #f16393;
+$orange: #fdb64e;
+$yellow: #ffd600;
+$white: #fffaf0;
+$black: #000000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    .button button {
+        background-color: $yellow;
+        color: black;
+        font-weight: bold;
+        border: 3px solid black;
+        box-shadow: -3px 3px 1px 1px black;
+        outline: 0;
+        padding: 0.4rem 1.5rem;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 0 black;
+            background-color: $yellow;
+        }
+    }
+
+    .menu_mobile {
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        @media (min-width: 768px) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    .menu_desktop {
+        display: none;
+        visibility: hidden;
+
+        @media (min-width: 768px) {
+            display: flex;
+            visibility: visible;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+    }
+
+    header {
+        padding: 1rem 2rem;
+        background-color: #48b8ac;
+
+        .menu {
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+        }
+
+        .menu_mobile,
+        .menu_desktop {
+            .title {
+                h1 {
+                    line-height: 1;
+                    font-size: 1.7rem;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+
+            .icon_menu {
+                svg {
+                    font-size: 2rem;
+                }
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+
+                @media (min-width: 1024px) {
+                    gap: 5rem;
+                }
+
+                @media (min-width: 1440px) {
+                    gap: 7rem;
+                }
+
+                li {
+                    padding: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .discount {
+        background-color: $black;
+        padding: 1rem;
+        text-align: center;
+
+        p,
+        span {
+            color: $white;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    .summer_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 2.5rem 1rem;
+        border-bottom: 3px solid black;
+        @media (min-width: 1024px) {
+            gap: 8rem;
+            padding: 2.5rem 4rem 4rem 4rem;
+            justify-content: space-between;
+        }
+
+        @media (min-width: 1440px) {
+            padding: 2.5rem 6rem 6rem 6rem;
+        }
+
+        .desc {
+            &_title {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+
+                @media (min-width: 1440px) {
+                    gap: 3rem;
+                }
+
+                h2,
+                span {
+                    font-family: "Dela Gothic One", cursive;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 6vw;
+
+                    @media (min-width: 1024px) {
+                        font-size: 3.5rem;
+                    }
+
+                    @media (min-width: 1440px) {
+                        font-size: 4.5rem;
+                    }
+                }
+
+                h2 {
+                    span {
+                        display: block;
+                    }
+                }
+
+                button {
+                    font-size: 4vw;
+
+                    @media (min-width: 1024px) {
+                        font-size: 1.5rem;
+                    }
+
+                    @media (min-width: 1440px) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+        .img {
+            img {
+                width: 45vw;
+                border: 3px solid black;
+                box-shadow: -6px 6px 1px 2px black;
+                outline: 0;
+
+                @media (min-width: 1024px) {
+                    width: 30rem;
+                    height: 20rem;
+                    object-fit: cover;
+                }
+
+                @media (min-width: 1440px) {
+                    width: 45rem;
+                    object-fit: cover;
+                    height: 27rem;
+                }
+            }
+        }
+    }
+
+    .chef_signature {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @media (min-width: 1024px) {
+            align-items: flex-start;
+            padding: 4rem;
+        }
+
+        &_title {
+            margin: 2rem 0;
+            h1 {
+                font-family: "Dela Gothic One", cursive;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 4.5vw;
+                display: block;
+                position: relative;
+
+                @media (min-width: 768px) {
+                    font-size: 1.7rem;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 2rem;
+                }
+            }
+
+            span {
+                display: block;
+                background-color: $yellow;
+                width: 98%;
+                height: 0.5rem;
+                position: absolute;
+                transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                z-index: -1;
+
+                @media (min-width: 768px) {
+                    width: 32rem;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 40rem;
+                }
+            }
+        }
+    }
+
+    .chef_dishes {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        @media (min-width: 1024px) {
+            gap: 3.5rem;
+        }
+
+        .dish {
+            @media (min-width: 768px) {
+                width: 13rem;
+            }
+
+            @media (min-width: 1440px) {
+                width: 20rem;
+            }
+
+            border: 3px solid black;
+            box-shadow: -6px 6px 1px 2px black;
+            outline: 0;
+
+            &_image {
+                box-shadow: 0 0 1px 1px black;
+                height: 12.5rem;
+                position: relative;
+                overflow: hidden;
+
+                @media (min-width: 1440px) {
+                    height: 20rem;
+                }
+
+                img {
+                    width: 60vw;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    @media (min-width: 639px) {
+                        width: 40vw;
+                    }
+
+                    @media (min-width: 768px) {
+                        width: 100%;
+                    }
+                }
+
+                .dish_info_icon,
+                .dish_info_weight {
+                    border: 3px solid black;
+                    padding: 0.2rem;
+                    background-color: $blue;
+                    position: absolute;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .dish_info_icon {
+                    top: 0.2rem;
+                    right: 0.2rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    cursor: pointer;
+
+                    p {
+                        font-family: "Dela Gothic One", cursive;
+                    }
+                }
+
+                .dish_info_weight {
+                    bottom: 0.2rem;
+                    right: 0.2rem;
+                }
+            }
+
+            &_title {
+                padding: 1rem;
+                h2 {
+                    font-size: 0.9rem;
+
+                    @media (min-width: 1440px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .booking_container {
+        @media (min-width: 1024px) {
+            padding: 6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .booking {
+            background-color: $blue;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+
+            @media (min-width: 1024px) {
+                align-items: flex-start;
+                border: 3px solid black;
+            }
+
+            @media (min-width: 1440px) {
+                width: 90vw;
+            }
+
+            &_title {
+                z-index: 10;
+                h1 {
+                    font-family: "Dela Gothic One", cursive;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 6vw;
+                    display: block;
+                    position: relative;
+                    z-index: 1000;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.7rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                span {
+                    display: block;
+                    background-color: $yellow;
+                    width: 95%;
+                    height: 0.5rem;
+                    position: absolute;
+                    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                    z-index: -1;
+
+                    @media (min-width: 768px) {
+                        width: 11rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 15rem;
+                    }
+                }
+            }
+
+            &_inputs {
+                margin: 1rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                @media (min-width: 425px) {
+                    width: 23rem;
+                }
+
+                @media (min-width: 768px) {
+                    width: 30rem;
+                }
+
+                @media (min-width: 1024px) {
+                    flex-direction: row;
+                    width: 100%;
+                    gap: 3rem;
+                    align-items: flex-start;
+                }
+
+                &_1 {
+                    width: 100%;
+                }
+
+                &_2 {
+                    .terms {
+                        margin: 1rem 0 3rem 0;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                        @media (min-width: 1024px) {
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+
+                        p {
+                            font-size: 0.7rem;
+                            margin-left: 1rem;
+                        }
+
+                        .term {
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+
+                            input {
+                                width: 2rem;
+                            }
+
+                            p {
+                                font-size: 0.8rem;
+                                margin: 0;
+
+                                span {
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &_3 {
+                    position: absolute;
+                    left: 2rem;
+                    bottom: 2rem;
+
+                    @media (min-width: 768px) {
+                        left: 150px;
+                        bottom: 2rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        left: 2rem;
+                        bottom: 2rem;
+                    }
+                }
+
+                .line {
+                    @media (min-width: 1024px) {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2rem;
+                    }
+
+                    .input {
+                        border: 3px solid black;
+                        box-shadow: -4px 4px 1px 1px black;
+                        width: 100%;
+                        margin: 0.6rem 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: white;
+
+                        @media (min-width: 1024px) {
+                            width: 20vw;
+                        }
+
+                        .icon {
+                            padding: 0.2rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 3px solid black;
+                            margin: 0 0.4rem;
+
+                            svg {
+                                font-weight: bold;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+
+                input,
+                textarea {
+                    outline: 0;
+                    padding: 0.8rem 0.3rem;
+                    width: 100%;
+                    border: 0;
+                    resize: none;
+
+                    font-weight: bold;
+                    color: black;
+
+                    &::placeholder {
+                        font-weight: bold;
+                        color: rgba(68, 68, 68, 0.5);
+                    }
+                }
+
+                textarea {
+                    padding: 0.8rem;
+                    border: 3px solid black;
+                    box-shadow: -4px 4px 1px 1px black;
+
+                    @media (min-width: 1024px) {
+                        width: 40vw;
+                    }
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type="number"] {
+                    -moz-appearance: textfield;
+                }
+            }
+        }
+    }
+
+    .main_menu {
+        padding: 4rem 2rem;
+
+        @media (min-width: 1024px) {
+            padding: 4rem;
+        }
+
+        &_title {
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (min-width: 1024px) {
+                justify-content: flex-start;
+            }
+
+            h1 {
+                font-family: "Dela Gothic One", cursive;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 4.5vw;
+                display: block;
+                position: relative;
+
+                @media (min-width: 768px) {
+                    font-size: 1.7rem;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 2rem;
+                }
+            }
+
+            span {
+                display: block;
+                background-color: $yellow;
+                width: 90%;
+                height: 0.5rem;
+                position: absolute;
+                transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                z-index: -1;
+
+                @media (min-width: 768px) {
+                    width: 8rem;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 10rem;
+                }
+            }
+        }
+
+        &_plates {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            .menu_plate {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 3rem;
+                border: 3px solid black;
+                box-shadow: -4px 4px 1px 1px black;
+                padding: 1rem 2rem;
+                width: 21rem;
+                height: 10.5rem;
+
+                @media (min-width: 1024px) {
+                    width: 26rem;
+                }
+
+                img {
+                    width: 9rem;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .our_history {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            gap: 3rem;
+            padding: 4rem 8rem;
+        }
+
+        &_video {
+            img {
+                width: 100%;
+                border: 3px solid black;
+                box-shadow: -4px 4px 1px 1px black;
+                height: 19rem;
+                object-fit: cover;
+
+                @media (min-width: 768px) {
+                    width: 30rem;
+                    height: 20rem;
+                }
+
+                @media (min-width: 1024px) {
+                    height: 30rem;
+                    width: 40vw;
+                }
+            }
+        }
+
+        &_content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &_title {
+                align-items: center;
+                margin: 1.5rem 0;
+
+                @media (min-width: 1024px) {
+                    width: 100%;
+                }
+
+                z-index: 10;
+                h1 {
+                    font-family: "Dela Gothic One", cursive;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 4vw;
+                    display: block;
+                    position: relative;
+                    z-index: 1000;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.7rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                span {
+                    display: block;
+                    background-color: $yellow;
+                    width: 80%;
+                    height: 0.5rem;
+                    position: absolute;
+                    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                    z-index: -1;
+
+                    @media (min-width: 768px) {
+                        width: 28rem;
+                        transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 24rem;
+                    }
+                }
+            }
+
+            &_desc {
+                margin: 2rem;
+                text-align: center;
+
+                @media (min-width: 1024px) {
+                    text-align: left;
+                    margin: 3rem 0;
+                }
+
+                p {
+                    font-weight: 500;
+                    line-height: 1.3;
+                    font-size: 1.2rem;
+                }
+
+                .flex {
+                    margin: 1rem 0;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    @media (min-width: 768px) {
+                        flex-direction: row;
+                        gap: 4rem;
+
+                        .f1,
+                        .f2 {
+                            width: 50%;
+                        }
+                    }
+
+                    @media (min-width: 1024px) {
+                        transform: translateY(3rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .articles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+
+        @media (min-width: 1024px) {
+            padding: 4rem 8rem;
+        }
+
+        &_container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 3px solid black;
+            box-shadow: -4px 4px 1px 1px black;
+            height: 30rem;
+            overflow: hidden;
+
+            @media (min-width: 425px) {
+                height: 35rem;
+            }
+
+            @media (min-width: 768px) {
+                height: 30rem;
+            }
+
+            @media (min-width: 1024px) {
+                flex-direction: row;
+                width: 100%;
+            }
+
+            &_promotions,
+            &_bonuses {
+                h1,
+                span {
+                    font-family: "Dela Gothic One", cursive;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
+
+                height: 15rem;
+                width: 100%;
+            }
+
+            &_promotions {
+                height: 15rem;
+                padding: 2rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1.5rem;
+                border-bottom: 2px solid black;
+
+                @media (min-width: 425px) {
+                    height: 17.5rem;
+                }
+
+                @media (min-width: 768px) {
+                    height: 30rem;
+                }
+
+                @media (min-width: 1024px) {
+                    height: 30rem;
+                    border: 0;
+                    border-right: 2px solid black;
+                }
+
+                span {
+                    display: block;
+                }
+
+                h1 {
+                    font-size: 4vw;
+
+                    @media (min-width: 1024px) {
+                        font-size: 3vw;
+                    }
+
+                    @media (min-width: 1440px) {
+                        font-size: 2vw;
+                    }
+                }
+            }
+
+            &_bonuses {
+                text-align: center;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                height: 15rem;
+
+                @media (min-width: 425px) {
+                    height: 17.5rem;
+                }
+
+                @media (min-width: 768px) {
+                    height: 30rem;
+                }
+
+                span {
+                    display: block;
+                }
+                &_first,
+                &_second {
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h1 {
+                        font-size: 3vw;
+
+                        @media (min-width: 768px) {
+                            font-size: 2.5vw;
+                        }
+
+                        @media (min-width: 1024px) {
+                            font-size: 2vw;
+                        }
+
+                        @media (min-width: 1440px) {
+                            font-size: 1.5vw;
+                        }
+                    }
+                }
+
+                &_first {
+                    grid-column: 1 / -1;
+                    border-bottom: 2px solid black;
+
+                    h1,
+                    span {
+                        font-family: "Dela Gothic One", cursive;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                    }
+                    .blue {
+                        background-color: $light_blue;
+                        border-right: 2px solid black;
+                    }
+                    .pink {
+                        background-color: $pink;
+                    }
+
+                    .blue,
+                    .pink {
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        padding: 0.8rem;
+                    }
+                }
+
+                &_second {
+                    background-color: $orange;
+                    grid-column: 1 / -1;
+                    height: 100%;
+
+                    h1,
+                    span {
+                        font-family: "Dela Gothic One", cursive;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+    .our_command {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+
+        @media (min-width: 1024px) {
+            padding: 2rem 8rem;
+            flex-direction: row;
+            gap: 5rem;
+        }
+
+        &_cards {
+            position: relative;
+
+            @media (min-width: 1024px) {
+                width: 40vw;
+                height: 38rem;
+            }
+
+            .card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                border: 3px solid black;
+                overflow: hidden;
+                box-shadow: -4px 4px 1px 1px black;
+
+                .image {
+                    width: 100%;
+                }
+
+                .content {
+                    padding: 0.8rem;
+                    text-align: center;
+
+                    h1 {
+                        font-family: "Dela Gothic One", cursive;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 5vw;
+
+                        @media (min-width: 768px) {
+                            font-size: 1.5rem;
+                        }
+
+                        @media (min-width: 1024px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    p {
+                        font-weight: bold;
+                        margin: 0.6rem 0;
+                    }
+                }
+            }
+
+            &_card_2 {
+                background-color: $pink;
+                height: 27rem;
+                width: 18rem;
+                transform: rotate(5deg);
+                z-index: -1;
+
+                @media (min-width: 1024px) {
+                    transform: rotate(4deg) translate(8rem, 5rem);
+                }
+
+                img {
+                    height: 20rem;
+                    border-bottom: 2px solid black;
+                    object-fit: cover;
+                }
+            }
+
+            &_card_1 {
+                z-index: 1000;
+                background-color: $light_blue;
+                height: 27rem;
+                width: 18rem;
+                transform: rotate(-2deg);
+
+                @media (min-width: 1024px) {
+                    transform: rotate(-3deg) translate(-5rem, -15rem);
+                }
+
+                img {
+                    height: 20rem;
+                    border-bottom: 2px solid black;
+                    object-fit: cover;
+                }
+            }
+
+            &_card_3 {
+                background-color: $orange;
+                height: 27rem;
+                width: 18rem;
+                transform: rotate(2deg) translateY(10rem);
+                z-index: -1000000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                img {
+                    height: 20rem;
+                    border-bottom: 2px solid black;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &_content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.8rem 0;
+
+            @media (min-width: 1024px) {
+                width: 30vw;
+            }
+
+            @media (min-width: 1224px) {
+                width: 50vw;
+            }
+
+            @media (min-width: 1440px) {
+                width: 70vw;
+            }
+
+            &_title {
+                align-items: center;
+                margin: 1.5rem 0;
+
+                @media (min-width: 1024px) {
+                    width: 100%;
+                }
+
+                z-index: 10;
+                h1 {
+                    font-family: "Dela Gothic One", cursive;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 4vw;
+                    display: block;
+                    position: relative;
+                    z-index: 1000;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.7rem;
+                    }
+
+                    @media (min-width: 1024px) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                span {
+                    display: block;
+                    background-color: $yellow;
+                    width: 90%;
+                    height: 0.5rem;
+                    position: absolute;
+                    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                    z-index: -1;
+
+                    @media (min-width: 768px) {
+                        width: 15rem;
+                        transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 15rem;
+                    }
+                }
+            }
+
+            &_desc {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.7rem;
+
+                p,
+                span {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .ratings {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+
+        @media (min-width: 1024px) {
+            padding: 4rem;
+            gap: 1rem;
+        }
+
+        &_title {
+            align-items: center;
+            margin: 1.5rem 0;
+
+            @media (min-width: 1024px) {
+                width: 100%;
+            }
+
+            z-index: 10;
+            h1 {
+                font-family: "Dela Gothic One", cursive;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 4vw;
+                display: block;
+                position: relative;
+                z-index: 1000;
+
+                @media (min-width: 768px) {
+                    font-size: 1.7rem;
+                }
+
+                @media (min-width: 1024px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            span {
+                display: block;
+                background-color: $yellow;
+                width: 90%;
+                height: 0.5rem;
+                position: absolute;
+                transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.5rem);
+                z-index: -1;
+
+                @media (min-width: 768px) {
+                    width: 30rem;
+                    transform: matrix(1, 0, -1, 1, 0, 0) translateY(-0.7rem);
+                }
+
+                @media (min-width: 1024px) {
+                    width: 31rem;
+                }
+
+                @media (min-width: 1440px) {
+                    width: 25rem;
+                }
+            }
+        }
+
+        &_cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            &_card {
+                border: 3px solid black;
+                box-shadow: -4px 4px 1px 1px black;
+                padding: 1.3rem;
+                border-radius: 0.8rem;
+                height: 12.5rem;
+                width: 19.5rem;
+
+                &_first {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+
+                    .stars {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 0.2rem;
+
+                        img {
+                            width: 1.72rem;
+                        }
+                    }
+                }
+
+                &_second {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 8rem;
+                }
+
+                span {
+                    display: block;
+                    font-weight: bold;
+                }
+
+                p {
+                    margin: 0.7rem 0;
+                    font-weight: bold;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
