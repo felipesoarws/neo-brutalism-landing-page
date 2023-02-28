@@ -358,7 +358,7 @@ function App() {
             </div>
             <div className="content">
               <h1>Helen</h1>
-              <p>Barista</p>
+              <p>Barist</p>
             </div>
           </div>
           <div className="our_command_cards_card_1 card">
