@@ -549,11 +549,6 @@ function App() {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="footer_details">
-            <p>Privacy Policy</p>
-            <p>All rights reserved</p>
-            <p>&copy; 2022 Forest Coffee</p>
-          </div>
 
           <div className="footer_details_2">
             <p>
@@ -573,6 +568,13 @@ function App() {
               </a>
             </p>
           </div>
+
+          <div className="footer_details">
+            <p>Privacy Policy</p>
+            <p>All rights reserved</p>
+            <p>&copy; 2022 Forest Coffee</p>
+          </div>
+
         </div>
       </footer>
     </div>
